@@ -1,0 +1,8 @@
+i{
+    font-size: 40px;
+}
+
+li.nav-item:hover{
+    transition: 0.5s;
+    background-color: lightgray;
+}
