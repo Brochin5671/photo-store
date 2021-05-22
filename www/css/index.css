@@ -2,6 +2,11 @@ i{
     font-size: 40px;
 }
 
+li.nav-item{
+    transition: 0.25s;
+    background-color: white;
+}
+
 li.nav-item:hover{
     transition: 0.5s;
     background-color: lightgray;
