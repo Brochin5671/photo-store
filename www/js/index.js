@@ -26,7 +26,7 @@ function loadGallery() {
     // List all images
     storageRef.child('/images').listAll()
         .then((res) => {
-            res.items.forEach((itemRef) => {
+            res.items.forEach((itemRef, idx) => {
 
                 // Create card element with image
                 const card = document.createElement('div');
@@ -35,14 +35,15 @@ function loadGallery() {
                 card.innerHTML = `
                     <img src="./img/favicon.ico" class="card-img-top" alt="${itemRef.name}">
                     <div class="card-body">
-                    <p class="card-text">This location is perfect for a weekend away</p>
+                    <p class="card-text">Loading...</p>
                     </div>`;
                 gallery.appendChild(card);
 
                 // Get each download URL and update img
                 storageRef.child(`/images/${itemRef.name}`).getDownloadURL()
-                    .then((url) => {
+                    .then((url, res) => {
                         card.querySelector('img').src = url;
+                        card.querySelector('p').textContent = `Photo ${idx+1}`;
                     })
                     .catch((err) => {
                         alert(err)
