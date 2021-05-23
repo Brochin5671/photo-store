@@ -11,3 +11,7 @@ li.nav-item:hover{
     transition: 0.5s;
     background-color: lightgray;
 }
+
+#addSpace{
+    height: 50px;
+}
