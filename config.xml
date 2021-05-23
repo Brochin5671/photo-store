@@ -25,4 +25,5 @@
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
         <string>need camera access to take pictures</string>
     </edit-config>
+    <icon src="www/img/favicon.ico" />
 </widget>
