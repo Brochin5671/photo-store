@@ -7,6 +7,7 @@ A simple photo storage application using Cordova and Firebase.
 ```
 npm install
 
+cordova platform add <platform>
 cordova run <platform>
 ```
 
