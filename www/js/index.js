@@ -19,7 +19,7 @@ function loadGallery() {
     // Refresh gallery
     const gallery = document.getElementById('gallery');
     const list = gallery.querySelectorAll('div.card');
-    for(const card of list){
+    for (const card of list) {
         card.remove();
     }
 
@@ -38,7 +38,7 @@ function loadGallery() {
                     <p class="card-text">This location is perfect for a weekend away</p>
                     </div>`;
                 gallery.appendChild(card);
-                
+
                 // Get each download URL and update img
                 storageRef.child(`/images/${itemRef.name}`).getDownloadURL()
                     .then((url) => {
@@ -50,7 +50,7 @@ function loadGallery() {
             });
 
             // Create default card if no images
-            if(!res.items.length){
+            if (!res.items.length) {
                 const card = document.createElement('div');
                 card.className = 'card shadow my-5 mx-auto';
                 card.style.width = '18rem';
