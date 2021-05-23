@@ -6,12 +6,13 @@ A simple photo storage application using Cordova and Firebase.
 * Install dependencies and choose of the available platforms to run (recommended platform is browser)
 ```
 npm install
+npm install -g cordova
 
 cordova platform add <platform>
 cordova run <platform>
 ```
 
-### Setting up Firebase
+### Setting up Your Own Firebase
 
 * Change the configuration in index.html (lines 74-80)
 ```js
